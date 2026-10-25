@@ -1,0 +1,47 @@
+[
+    {
+    "message": "Add 2 kg rice, a dozen bananas, and one packet of milk to my shopping list.",
+    "expected": {
+      "item": "tomatoes",
+      "quantity": 2,
+      "unit": "kg",
+      "purchased": false
+    }
+  },
+  {
+    "message": "Add 2 kg of tomatoes",
+    "expected": {
+      "item": "tomatoes",
+      "quantity": 2,
+      "unit": "kg",
+      "purchased": false
+    }
+  },
+  {
+    "message": "Add tomatoes",
+    "expected": {
+      "item": "tomatoes",
+      "quantity": null,
+      "unit": null,
+      "purchased": false
+    }
+  },
+  {
+    "message": "We need 3 packets of biscuits",
+    "expected": {
+      "item": "biscuits",
+      "quantity": 3,
+      "unit": "packets",
+      "purchased": false
+    }
+  },
+  {
+    "message": "I bought 2 kg of onions",
+    "expected": {
+      "item": "onions",
+      "quantity": 2,
+      "unit": "kg",
+      "purchased": true
+    }
+  }
+]
