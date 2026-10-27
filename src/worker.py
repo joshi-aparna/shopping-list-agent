@@ -53,10 +53,13 @@ def process_file(path: Path) -> None:
             task.get("task_id", path.name),
             count,
         )
+        write_notification(
+            f"Successfully processed your message: {task.get('text', '')}",
+        )
 
     except Exception:
         logging.exception("Failed to process %s", path.name)
-        write_failure_notification(
+        write_notification(
             f"Failed to process your message: {task.get('text', '')}",
         )
 
@@ -67,7 +70,7 @@ def process_file(path: Path) -> None:
                 logging.exception("Could not move %s to failed", path.name)
 
 
-def write_failure_notification(message: str) -> None:
+def write_notification(message: str) -> None:
     notification = {
         "text": message,
         "try_count": 0,
