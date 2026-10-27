@@ -3,8 +3,8 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PYTHON="$ROOT/.venv/bin/python"
-PLIST="$HOME/Library/LaunchAgents/com.shopping-agent.worker.plist"
-LABEL="com.shopping-agent.worker"
+PLIST="$HOME/Library/LaunchAgents/com.shopping-list-agent.worker.plist"
+LABEL="com.shopping-list-agent.worker"
 
 if [[ ! -x "$PYTHON" ]]; then
     echo "Python not found at $PYTHON"
@@ -13,7 +13,6 @@ if [[ ! -x "$PYTHON" ]]; then
 fi
 
 mkdir -p "$HOME/Library/LaunchAgents"
-mkdir -p "$HOME/Library/Logs/shopping-agent"
 
 cat > "$PLIST" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -49,4 +48,3 @@ launchctl bootout "gui/$(id -u)" "$PLIST" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST"
 
 echo "Worker installed and started."
-echo "Logs: $HOME/Library/Logs/shopping-agent/worker.log"
