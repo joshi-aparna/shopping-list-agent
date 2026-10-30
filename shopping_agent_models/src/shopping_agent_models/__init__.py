@@ -5,4 +5,7 @@ __all__ = [
     "ShoppingItem",
     "ShoppingItems",
     "ShoppingAgent",
+    "CartAddResult",
+    "CartValue",
+    "ClearCartResult",
 ]
