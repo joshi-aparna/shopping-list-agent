@@ -1,7 +1,6 @@
 import json
 import logging
 import os
-import shutil
 import time
 from pathlib import Path
 import logging.handlers

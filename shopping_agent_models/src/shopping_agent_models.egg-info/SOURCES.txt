@@ -1,0 +1,9 @@
+pyproject.toml
+src/shopping_agent_models/ShoppingAgent.py
+src/shopping_agent_models/ShoppingItem.py
+src/shopping_agent_models/__init__.py
+src/shopping_agent_models.egg-info/PKG-INFO
+src/shopping_agent_models.egg-info/SOURCES.txt
+src/shopping_agent_models.egg-info/dependency_links.txt
+src/shopping_agent_models.egg-info/requires.txt
+src/shopping_agent_models.egg-info/top_level.txt
