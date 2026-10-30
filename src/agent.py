@@ -6,7 +6,7 @@ from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIChatModel
 from pydantic_ai.providers.openai import OpenAIProvider
 
-from src.models import ShoppingItem, ShoppingItems
+from shopping_agent_models import ShoppingItems
 
 #async def inspect_request(request: httpx.Request) -> None:
 #    print("\n--- Actual HTTP request body ---")
