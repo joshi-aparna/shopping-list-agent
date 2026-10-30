@@ -1,21 +1,21 @@
 from typing import Protocol
 
-from .ShoppingItem import ShoppingListItems
+from .ShoppingItem import CartAddResult, CartValue, ClearCartResult, ShoppingItems
 
 
 class ShoppingAgent(Protocol):
 
     async def cartadd(
         self,
-        items: ShoppingListItems
-    ) -> None:
+        items: ShoppingItems,
+    ) -> list[CartAddResult]:
         ...
 
-    async def view_cart(self):
+    async def view_cart(self) -> ShoppingItems:
         ...
 
-    async def cartvalue(self):
+    async def cartvalue(self) -> CartValue:
         ...
 
-    async def clear_cart(self):
+    async def clear_cart(self) -> ClearCartResult:
         ...

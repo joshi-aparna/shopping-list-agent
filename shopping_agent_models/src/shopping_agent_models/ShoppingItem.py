@@ -14,3 +14,18 @@ class ShoppingItem(BaseModel):
 
 class ShoppingItems(BaseModel):
     items: list[ShoppingItem]
+
+class CartAddResult(BaseModel):
+    item: str
+    success: bool
+    message: str
+
+class CartValue(BaseModel):
+    total: float
+    item_count: int
+    message: str
+
+class ClearCartResult(BaseModel):
+    success: bool
+    items_removed: int
+    message: str
