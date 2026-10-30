@@ -1,5 +1,5 @@
 from .ShoppingItem import ShoppingItem, ShoppingItems
-from .ShoppingAgent import ShoppingAgent
+from .ShoppingAgent import ShoppingAgent, CartAddResult, CartValue, ClearCartResult
 
 __all__ = [
     "ShoppingItem",
