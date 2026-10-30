@@ -1,6 +1,0 @@
-Metadata-Version: 2.4
-Name: shopping-agent-models
-Version: 0.1.0
-Summary: Shared models and interfaces for shopping agents
-Requires-Python: >=3.11
-Requires-Dist: pydantic>=2.0
