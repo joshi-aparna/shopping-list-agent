@@ -16,3 +16,6 @@ class ShoppingAgent(Protocol):
 
     async def cartvalue(self):
         ...
+
+    async def clear_cart(self):
+        ...
